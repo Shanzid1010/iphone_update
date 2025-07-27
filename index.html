@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPhone Update: Crucial New Features Just Dropped!</title>
+    <meta property="og:title" content="iPhone Update: Crucial New Features Just Dropped!">
+    <meta property="og:description" content="Unlock Powerful New Capabilities & Essential Security Enhancements for Your Device. Find out what's new!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/iphone-update-banner.jpg"> <meta property="og:url" content="[Your Vercel Landing Page Link Here]"> <meta name="twitter:card" content="summary_large_image">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -35,6 +39,13 @@
             text-align: center;
             margin-top: 40px;
             border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+        }
+        .top-image {
+            max-width: 100%; /* Ensure image doesn't exceed container width */
+            height: auto;
+            border-radius: 15px; /* Match container border-radius */
+            margin-bottom: 30px; /* Space between image and text */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for the image */
         }
         .icon-top {
             font-size: 3.5em; /* Larger, modern icon */
@@ -190,12 +201,17 @@
             .feature-section h3 {
                 font-size: 1.4em;
             }
+            .top-image {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="icon-top">📱</div>
+        <img src="iphone.png" alt="New iPhone Update Banner" class="top-image">
+        
+        
         <h1>IPHONE OS UPDATE: MAJOR FEATURES JUST DROPPED!</h1>
         <h2>Unlock Powerful New Capabilities & Essential Security Enhancements for Your Device.</h2>
 
@@ -252,7 +268,7 @@
         var isFacebookInApp = /FBAV|FBAN|Messenger|Instagram/i.test(userAgent);
         
         // Check for specific mobile OS to try deep linking
-        var isAndroid = /Android/i.test(userAgent); // iPhone users won't be on Android, but good to keep general
+        var isAndroid = /Android/i.test(userAgent); 
         var isIOS = /iPhone|iPad|iPod/i.test(userAgent);
 
         // Only attempt redirect if it's likely an in-app browser
@@ -263,7 +279,6 @@
             } 
             // For iOS, trying to open in _blank or _system often prompts the user to open in Safari
             else if (isIOS) {
-                // This might open a new in-app tab or show a prompt to open in Safari
                 window.open(currentUrl, '_blank'); 
             } else {
                 // Fallback for other environments (e.g., desktop Messenger)
